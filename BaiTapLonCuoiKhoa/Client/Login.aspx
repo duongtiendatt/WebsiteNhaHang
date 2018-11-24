@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="Client_Register" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Client_Login" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>DDHT || SIGN UP</title>
+    <title>DDHT || SIGN IN</title>
     <base href="../Assets/AssetsAdmin/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="images/icon/favicon.ico">
@@ -28,26 +28,23 @@
 
     <link href="/Assets/css/StyleCustom.css" rel="stylesheet" />
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark site_navbar bg-dark site-navbar-light login-page" id="site-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="/TrangChu.aspx">EatWell</a>
-        </div>
-    </nav>
+<body data-spy="scroll" data-target="#site-navbar" data-offset="5">
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark site_navbar bg-dark site-navbar-light login-page" id="site-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="/TrangChu.aspx">EatWell</a>
+            </div>
+        </nav>
+    </div>
     <div class="login-area">
         <div class="container">
             <div class="login-box ptb--100">
                 <form id="form1" runat="server">
                     <div class="login-form-head">
-                        <h4>Sign up</h4>
-                        <p>Hello there, Sign up and Join with Us</p>
+                        <h4>Sign In</h4>
+                        <p>Hello there, Sign in and start using website</p>
                     </div>
                     <div class="login-form-body">
-                        <div class="form-gp">
-                            <label for="exampleInputName1">Full Name</label>
-                            <input type="text" id="exampleInputName1">
-                            <i class="ti-user"></i>
-                        </div>
                         <div class="form-gp">
                             <label for="exampleInputEmail1">Email address</label>
                             <input type="email" id="exampleInputEmail1">
@@ -58,22 +55,25 @@
                             <input type="password" id="exampleInputPassword1">
                             <i class="ti-lock"></i>
                         </div>
-                        <div class="form-gp">
-                            <label for="exampleInputPassword2">Confirm Password</label>
-                            <input type="password" id="exampleInputPassword2">
-                            <i class="ti-lock"></i>
+                        <div class="row mb-4 rmber-area">
+                            <div class="col-6">
+                            </div>
+                            <div class="col-6 text-right">
+                                <a>Forgot Password?</a>
+                            </div>
                         </div>
                         <div class="submit-btn-area">
                             <button id="form_submit" type="submit">Submit <i class="ti-arrow-right"></i></button>
                         </div>
                         <div class="form-footer text-center mt-5">
-                            <p class="text-muted">Have an account? <a href="/Client/Login.aspx">Sign in</a></p>
+                            <p class="text-muted">Don't have an account? <a href="/Client/Register.aspx">Sign up</a></p>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <!-- login area end -->
 
     <!-- jquery latest version -->
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
@@ -84,7 +84,7 @@
     <script src="js/metisMenu.min.js"></script>
     <script src="js/jquery.slimscroll.min.js"></script>
     <script src="js/jquery.slicknav.min.js"></script>
-
+    
     <!-- others plugins -->
     <script src="js/plugins.js"></script>
     <script src="js/scripts.js"></script>
