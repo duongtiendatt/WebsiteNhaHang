@@ -4,16 +4,216 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <asp:ContentPlaceHolder id="titleAdmin" runat="server">
-    </asp:ContentPlaceHolder>
+    <title>
+        <asp:ContentPlaceHolder id="titleAdmin" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <base href="Assets/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
+    <link rel="stylesheet" href="AssetsAdmin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="AssetsAdmin/css/font-awesome.min.css">
+    <link rel="stylesheet" href="AssetsAdmin/css/themify-icons.css">
+    <link rel="stylesheet" href="AssetsAdmin/css/metisMenu.css">
+    <link rel="stylesheet" href="AssetsAdmin/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="AssetsAdmin/css/slicknav.min.css">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <!-- others css -->
+    <link rel="stylesheet" href="AssetsAdmin/css/typography.css">
+    <link rel="stylesheet" href="AssetsAdmin/css/default-css.css">
+    <link rel="stylesheet" href="AssetsAdmin/css/styles.css">
+    <link rel="stylesheet" href="AssetsAdmin/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="AssetsAdmin/js/vendor/modernizr-2.8.3.min.js"></script>
+    
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        <div id="preloader">
+            <div class="loader"></div>
+        </div>
+        <!-- preloader area end -->
+        <!-- page container area start -->
+        <div class="page-container">
+            <!-- sidebar menu area start -->
+            <div class="sidebar-menu">
+                <div class="sidebar-header">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="~/assets/images/icon/logo.png" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="main-menu">
+                    <div class="menu-inner">
+                        <nav>
+                            <ul class="metismenu" id="menu">
+                                <li class="active">
+                                    <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>dashboard</span></a>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-users"></i>
+                                        <span>Users</span></a>
+                                    <ul class="collapse">
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-birthday-cake"></i>
+                                        <span>Foods</span></a>
+                                    <ul class="collapse">
+                                    </ul>
+                                </li>
+
+
+                                <li>
+                                    <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-birthday-cake"></i>
+                                        <span>Order Foods</span></a>
+                                    <ul class="collapse">
+                                    </ul>
+                                </li>
+
+
+                                <li>
+                                    <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
+                                        <span>Order Tables</span></a>
+                                    <ul class="collapse">
+                                        <li><a href="datatable.html">datatable</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layers-alt"></i><span>Pages</span></a>
+                                    <ul class="collapse">
+                                        <li><a href="login.html">Login</a></li>
+                                        <li><a href="login2.html">Login 2</a></li>
+                                        <li><a href="login3.html">Login 3</a></li>
+                                        <li><a href="register.html">Register</a></li>
+                                        <li><a href="register2.html">Register 2</a></li>
+                                        <li><a href="register3.html">Register 3</a></li>
+                                        <li><a href="register4.html">Register 4</a></li>
+                                        <li><a href="reset-pass.html">reset password</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-exclamation-triangle"></i>
+                                        <span>Error</span></a>
+                                    <ul class="collapse">
+                                        <li><a href="404.html">Error 404</a></li>
+                                        <li><a href="403.html">Error 403</a></li>
+                                        <li><a href="500.html">Error 500</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- sidebar menu area end -->
+            <!-- main content area start -->
+            <div class="main-content">
+                <!-- header area start -->
+                <div class="header-area">
+                    <div class="row align-items-center">
+                        <!-- nav and search button -->
+                        <div class="col-md-6 col-sm-8 clearfix">
+                            <div class="nav-btn pull-left">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="search-box pull-left">
+                                <form action="#">
+                                    <input type="text" name="search" placeholder="Search..." required>
+                                    <i class="ti-search"></i>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- profile info & task notification -->
+                        <div class="col-md-6 col-sm-4 clearfix">
+                            <ul class="notification-area pull-right">
+                                <li id="full-view"><i class="ti-fullscreen"></i></li>
+                                <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- header area end -->
+                <!-- page title area start -->
+                <div class="page-title-area">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <asp:ContentPlaceHolder id="LinkPageAdmin" runat="server">
         
-        </asp:ContentPlaceHolder>
+                            </asp:ContentPlaceHolder>
+                            
+                        </div>
+                        <div class="col-sm-6 clearfix">
+                            <div class="user-profile pull-right">
+                                <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
+                                <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Kumkum Rai <i class="fa fa-angle-down"></i></h4>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Message</a>
+                                    <a class="dropdown-item" href="#">Settings</a>
+                                    <a class="dropdown-item" href="#">Log Out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <asp:ContentPlaceHolder id="ContentRight" runat="server">
+        
+                </asp:ContentPlaceHolder>
+                <!-- page title area end -->
+            
+            </div>
+
+            <!-- main content area end -->
+            <!-- footer area start-->
+            <footer>
+                <div class="footer-area">
+                    <p>© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+                </div>
+            </footer>
+            <!-- footer area end-->
+        </div>
+        <!-- page container area end -->
+        <!-- offset area start -->
+
+        <!-- offset area end -->
+        <!-- jquery latest version -->
+        <script src="AssetsAdmin/js/vendor/jquery-2.2.4.min.js"></script>
+        <!-- bootstrap 4 js -->
+        <script src="AssetsAdmin/js/popper.min.js"></script>
+        <script src="AssetsAdmin/js/bootstrap.min.js"></script>
+        <script src="AssetsAdmin/js/owl.carousel.min.js"></script>
+        <script src="AssetsAdmin/js/metisMenu.min.js"></script>
+        <script src="AssetsAdmin/js/jquery.slimscroll.min.js"></script>
+        <script src="AssetsAdmin/js/jquery.slicknav.min.js"></script>
+
+        <!-- start chart js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+        <!-- start highcharts js -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <!-- start zingchart js -->
+        <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+        <script>
+            zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
+        </script>
+        <!-- all line chart activation -->
+        <script src="AssetsAdmin/js/line-chart.js"></script>
+        <!-- all pie chart -->
+        <script src="AssetsAdmin/js/pie-chart.js"></script>
+        <!-- others plugins -->
+        <script src="AssetsAdmin/js/plugins.js"></script>
+        <script src="AssetsAdmin/js/scripts.js"></script>
+        
+
     </div>
     </form>
 </body>
