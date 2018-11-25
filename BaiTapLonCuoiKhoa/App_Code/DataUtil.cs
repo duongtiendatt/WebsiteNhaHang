@@ -30,7 +30,7 @@ public class DataUtil
             table tb = new table();
             tb.table_id = (int)dr["table_id"];
             tb.table_name = (string)dr["table_name"];
-            tb.table_status = (int)dr["table_status"];
+            tb.table_status = (bool)dr["table_status"];
             tb.table_description = (string)dr["table_description"];
 
             li.Add(tb);
@@ -74,7 +74,7 @@ public class DataUtil
             tb = new table();
             tb.table_id = (int)dr["table_id"];
             tb.table_name = (string)dr["table_name"];
-            tb.table_status = (int)dr["table_status"];
+            tb.table_status = (bool)dr["table_status"];
             tb.table_description = (string)dr["table_description"];
 
 

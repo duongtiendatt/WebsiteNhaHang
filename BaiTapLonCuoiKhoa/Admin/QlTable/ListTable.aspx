@@ -13,12 +13,12 @@
                             <div class="card-body">
                                 <h4 class="header-title">Danh sách Bàn</h4>
                                 <div class="data-tables">
-                                    <asp:gridview runat="server" id="ds" autogeneratecolumns="false">
+                                    <asp:gridview runat="server" id="dstb" autogeneratecolumns="false">
                                         <Columns>
-                                            <asp:BoundField DataField="table_id" HeaderText="ma sv" />
-                                            <asp:BoundField DataField="table_name" HeaderText="ho ten" />
-                                            <asp:BoundField DataField="table_status" HeaderText="dia chi" />
-                                            <asp:BoundField DataField="table_description" HeaderText="dien thoai" />
+                                            <asp:BoundField DataField="table_id" HeaderText="Mã Bàn" />
+                                            <asp:BoundField DataField="table_name" HeaderText="Tên Bàn" />
+                                            <asp:BoundField DataField="table_status" HeaderText="Trạng Thái" />
+                                            <asp:BoundField DataField="table_description" HeaderText="Mô tả" />
                                             
                                             <%--<asp:TemplateField HeaderText="xoa" >
                                                 <ItemTemplate>
