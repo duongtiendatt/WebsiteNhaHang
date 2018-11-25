@@ -21,7 +21,7 @@ public class DataUtil
 
     public List<table> dsTable()
     {
-        List<table> li = new List<table>();
+        List<table> listTable = new List<table>();
         string sqlslTable = "select * from qlTable";
         con.Open();
         SqlCommand cmd = new SqlCommand(sqlslTable, con);
@@ -34,11 +34,11 @@ public class DataUtil
             tb.table_status = (bool)dr["table_status"];
             tb.table_description = (string)dr["table_description"];
 
-            li.Add(tb);
+            listTable.Add(tb);
 
         }
         con.Close();
-        return li;
+        return listTable;
     }
 
 
