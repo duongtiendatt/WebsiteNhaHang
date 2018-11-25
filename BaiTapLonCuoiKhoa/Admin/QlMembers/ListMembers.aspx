@@ -36,22 +36,21 @@
                                 <table id="dataTable3" class="text-center dataTable no-footer dtr-inline" role="grid" aria-describedby="dataTable3_info" style="width: 959px;">
                                     <thead class="text-capitalize">
                                         <tr role="row">
-                                            <th class="sorting_asc" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 111px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">Full name</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 226px;" aria-label="Position: activate to sort column ascending">Phone</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 94px;" aria-label="Office: activate to sort column ascending">Mail</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 54px;" aria-label="Age: activate to sort column ascending">User name</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 109px;" aria-label="Start Date: activate to sort column ascending">Type</th>
+                                            <th class="sorting_asc" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 111px;" aria-sort="ascending" aria-label="Fullname: activate to sort column descending">Fullname</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 226px;" aria-label="Phone: activate to sort column ascending">Phone</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 94px;" aria-label="Mail: activate to sort column ascending">Mail</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 54px;" aria-label="Username: activate to sort column ascending">Username</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 109px;" aria-label="Type Date: activate to sort column ascending">Type</th>
                                             <%--<th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 77px;" aria-label="salary: activate to sort column ascending">salary</th>--%>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <%
                                             var listMembers = new DataUtil().GetListMembers();
-                                            Response.Write("<tr>");
-                                            var sorting = "sorting_1";
+                                            Response.Write("<tr role=row class=odd>");
                                             foreach (var mb in listMembers)
                                             {
-                                                Response.Write("<td tabindex=0>"+mb.member_fullname+"</td>");
+                                                Response.Write("<td tabindex=0  class=sorting_1>"+mb.member_fullname+"</td>");
                                                 Response.Write("<td>"+mb.member_phone+"</td>");
                                                 Response.Write("<td>"+mb.member_mail+"</td>");
                                                 Response.Write("<td>"+mb.member_username+"</td>");
