@@ -11,7 +11,7 @@
                     <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Data Table Default</h4>
+                                <h4 class="header-title">Danh sách Bàn</h4>
                                 <div class="data-tables">
                                     <asp:gridview runat="server" id="ds" autogeneratecolumns="false">
                                         <Columns>
