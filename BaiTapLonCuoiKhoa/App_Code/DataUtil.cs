@@ -14,10 +14,11 @@ public class DataUtil
     SqlConnection con;
     public DataUtil()
     {
-        string sqlcon = @"Data Source=WIN-BPJ44D603CR\SQLEXPRESS;Initial Catalog=WebsiteNhaHang;Integrated Security=True";
+        string sqlcon = @"Data Source=.\SQLEXPRESS;Initial Catalog=WebsiteNhaHang;Integrated Security=True";
         con = new SqlConnection(sqlcon);
 
     }
+
     public List<table> dsTable()
     {
         List<table> li = new List<table>();
@@ -39,6 +40,8 @@ public class DataUtil
         con.Close();
         return li;
     }
+
+
     public void AddTable(table tb)
     {
         string sqladdtb = "insert into qlTable values(@nametb,@stt,@mota)";
@@ -98,6 +101,40 @@ public class DataUtil
     }
 
 
+
+
+
+
+    /// <summary>
+    /// Get list members
+    /// created by : Dat 25-11-2018
+    /// </summary>
+    /// <returns></returns>
+    public List<Member> GetListMembers()
+    {
+        List<Member> listMember = new List<Member>();
+        string sqlslTable = "select * from Member";
+        con.Open();
+        SqlCommand cmd = new SqlCommand(sqlslTable, con);
+        SqlDataReader dr = cmd.ExecuteReader();
+        while (dr.Read())
+        {
+            Member mb = new Member();
+            mb.member_id = (int)dr["member_id"];
+            mb.member_status = (int)dr["member_status"];
+            mb.member_type = (int)dr["member_type"];
+            mb.member_fullname = (string)dr["member_fullname"];
+            mb.member_mail = (string)dr["member_mail"];
+            mb.member_password = (string)dr["member_password"];
+            mb.member_phone = (string)dr["member_phone"];
+            mb.member_username = (string)dr["member_username"];
+
+            listMember.Add(mb);
+
+        }
+        con.Close();
+        return listMember;
+    }
 
 }
 
