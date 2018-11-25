@@ -10,24 +10,25 @@
     </title>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <base href="Assets/" />
+    <Base href="../../">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
-    <link rel="stylesheet" href="AssetsAdmin/css/bootstrap.min.css">
-    <link rel="stylesheet" href="AssetsAdmin/css/font-awesome.min.css">
-    <link rel="stylesheet" href="AssetsAdmin/css/themify-icons.css">
-    <link rel="stylesheet" href="AssetsAdmin/css/metisMenu.css">
-    <link rel="stylesheet" href="AssetsAdmin/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="AssetsAdmin/css/slicknav.min.css">
+    <link rel="shortcut icon" type="image/png" href="Assets/AssetsAdmin/images/icon/favicon.ico">
+    <link rel="stylesheet" href="Assets/AssetsAdmin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/AssetsAdmin/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Assets/AssetsAdmin/css/themify-icons.css">
+    <link rel="stylesheet" href="Assets/AssetsAdmin/css/metisMenu.css">
+    <link rel="stylesheet" href="Assets/AssetsAdmin/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="Assets/AssetsAdmin/css/slicknav.min.css">
     <!-- amchart css -->
     <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
     <!-- others css -->
-    <link rel="stylesheet" href="AssetsAdmin/css/typography.css">
-    <link rel="stylesheet" href="AssetsAdmin/css/default-css.css">
-    <link rel="stylesheet" href="AssetsAdmin/css/styles.css">
-    <link rel="stylesheet" href="AssetsAdmin/css/responsive.css">
+    <link rel="stylesheet" href="Assets/AssetsAdmin/css/typography.css">
+    <link rel="stylesheet" href="Assets/AssetsAdmin/css/default-css.css">
+    <link rel="stylesheet" href="Assets/AssetsAdmin/css/styles.css">
+    <link rel="stylesheet" href="Assets/AssetsAdmin/css/responsive.css">
     <!-- modernizr css -->
-    <script src="AssetsAdmin/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="Assets/AssetsAdmin/js/vendor/modernizr-2.8.3.min.js"></script>
     
 </head>
 <body>
@@ -44,7 +45,7 @@
                 <div class="sidebar-header">
                     <div class="logo">
                         <a href="index.html">
-                            <img src="~/assets/images/icon/logo.png" alt="logo"></a>
+                            <img src="Assets/AssetsAdmin/images/icon/logo.png" alt="logo"></a>
                     </div>
                 </div>
                 <div class="main-menu">
@@ -154,7 +155,7 @@
                         </div>
                         <div class="col-sm-6 clearfix">
                             <div class="user-profile pull-right">
-                                <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
+                                <img class="avatar user-thumb" src="Assets/AssetsAdmin/images/author/avatar.png" alt="avatar">
                                 <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Kumkum Rai <i class="fa fa-angle-down"></i></h4>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#">Message</a>
@@ -186,14 +187,14 @@
 
         <!-- offset area end -->
         <!-- jquery latest version -->
-        <script src="AssetsAdmin/js/vendor/jquery-2.2.4.min.js"></script>
+        <script src="Assets/AssetsAdmin/js/vendor/jquery-2.2.4.min.js"></script>
         <!-- bootstrap 4 js -->
-        <script src="AssetsAdmin/js/popper.min.js"></script>
-        <script src="AssetsAdmin/js/bootstrap.min.js"></script>
-        <script src="AssetsAdmin/js/owl.carousel.min.js"></script>
-        <script src="AssetsAdmin/js/metisMenu.min.js"></script>
-        <script src="AssetsAdmin/js/jquery.slimscroll.min.js"></script>
-        <script src="AssetsAdmin/js/jquery.slicknav.min.js"></script>
+        <script src="Assets/AssetsAdmin/js/popper.min.js"></script>
+        <script src="Assets/AssetsAdmin/js/bootstrap.min.js"></script>
+        <script src="Assets/AssetsAdmin/js/owl.carousel.min.js"></script>
+        <script src="Assets/AssetsAdmin/js/metisMenu.min.js"></script>
+        <script src="Assets/AssetsAdmin/js/jquery.slimscroll.min.js"></script>
+        <script src="Assets/AssetsAdmin/js/jquery.slicknav.min.js"></script>
 
         <!-- start chart js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
@@ -206,12 +207,12 @@
             ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
         </script>
         <!-- all line chart activation -->
-        <script src="AssetsAdmin/js/line-chart.js"></script>
+        <script src="Assets/AssetsAdmin/js/line-chart.js"></script>
         <!-- all pie chart -->
-        <script src="AssetsAdmin/js/pie-chart.js"></script>
+        <script src="Assets/AssetsAdmin/js/pie-chart.js"></script>
         <!-- others plugins -->
-        <script src="AssetsAdmin/js/plugins.js"></script>
-        <script src="AssetsAdmin/js/scripts.js"></script>
+        <script src="Assets/AssetsAdmin/js/plugins.js"></script>
+        <script src="Assets/AssetsAdmin/js/scripts.js"></script>
         
 
     </div>
