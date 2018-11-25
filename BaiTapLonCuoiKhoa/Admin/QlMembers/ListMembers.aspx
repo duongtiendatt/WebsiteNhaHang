@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="DDHT || List members" Language="C#" MasterPageFile="~/Admin/MasterPageAdmin.master" AutoEventWireup="true" CodeFile="ListMembers.aspx.cs" Inherits="Admin_QlMembers_ListMembers" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="titleAdmin" runat="Server">
+    DDHT || List members
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="LinkPageAdmin" runat="Server">
 </asp:Content>
@@ -26,8 +27,14 @@
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
-                                <div id="dataTable3_filter" class="dataTables_filter">
-                                    <label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="dataTable3"></label>
+                                <div id="dataTable3_filter" class="dataTables_filter" style="line-height: 30px;">
+                                    <label style="display: inline-flex;">
+                                        Search:<form action="#">
+                                            <input type="search" class="form-control form-control-sm" placeholder="Search" aria-controls="dataTable3">
+                                            <i class="ti-search"></i>
+                                        </form>
+                                    </label>
+
                                 </div>
                             </div>
                         </div>
@@ -36,8 +43,8 @@
                                 <table id="dataTable3" class="text-center dataTable no-footer dtr-inline" role="grid" aria-describedby="dataTable3_info" style="width: 959px;">
                                     <thead class="text-capitalize">
                                         <tr role="row">
-                                            <th class="sorting_asc" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 111px;" aria-sort="ascending" aria-label="Fullname: activate to sort column descending">Fullname</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 226px;" aria-label="Phone: activate to sort column ascending">Phone</th>
+                                            <th class="sorting_asc" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 226px;" aria-sort="ascending" aria-label="Fullname: activate to sort column descending">Fullname</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 111px;" aria-label="Phone: activate to sort column ascending">Phone</th>
                                             <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 94px;" aria-label="Mail: activate to sort column ascending">Mail</th>
                                             <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 54px;" aria-label="Username: activate to sort column ascending">Username</th>
                                             <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 109px;" aria-label="Type Date: activate to sort column ascending">Type</th>
@@ -47,14 +54,14 @@
                                     <tbody>
                                         <%
                                             var listMembers = new DataUtil().GetListMembers();
-                                            Response.Write("<tr role=row class=odd>");
                                             foreach (var mb in listMembers)
                                             {
-                                                Response.Write("<td tabindex=0  class=sorting_1>"+mb.member_fullname+"</td>");
-                                                Response.Write("<td>"+mb.member_phone+"</td>");
-                                                Response.Write("<td>"+mb.member_mail+"</td>");
-                                                Response.Write("<td>"+mb.member_username+"</td>");
-                                                if(mb.member_type == 1)
+                                                Response.Write("<tr role=row class=odd>");
+                                                Response.Write("<td tabindex=0  class=sorting_1>" + mb.member_fullname + "</td>");
+                                                Response.Write("<td>" + mb.member_phone + "</td>");
+                                                Response.Write("<td>" + mb.member_mail + "</td>");
+                                                Response.Write("<td>" + mb.member_username + "</td>");
+                                                if (mb.member_type == 1)
                                                 {
                                                     Response.Write("<td>Admin</td>");
                                                 }
@@ -62,96 +69,16 @@
                                                 {
                                                     Response.Write("<td>User</td>");
                                                 }
+                                                Response.Write("</tr>");
+
                                             }
-                                            Response.Write("</tr>");
                                         %>
-                                       <%-- <tr role="row" class="odd">
-                                            <td tabindex="0" class="sorting_1">Airi Satou</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>33</td>
-                                            <td>2008/11/28</td>
-                                            <td>$162,700</td>
-                                        </tr>
-                                        <tr role="row" class="even">
-                                            <td tabindex="0" class="sorting_1">Angelica Ramos</td>
-                                            <td>Chief Executive Officer (CEO)</td>
-                                            <td>London</td>
-                                            <td>47</td>
-                                            <td>2009/10/09</td>
-                                            <td>$1,200,000</td>
-                                        </tr>
-                                        <tr role="row" class="odd">
-                                            <td tabindex="0" class="sorting_1">Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>San Francisco</td>
-                                            <td>66</td>
-                                            <td>2009/01/12</td>
-                                            <td>$86,000</td>
-                                        </tr>
-                                        <tr role="row" class="even">
-                                            <td tabindex="0" class="sorting_1">Bradley Greer</td>
-                                            <td>Software Engineer</td>
-                                            <td>London</td>
-                                            <td>41</td>
-                                            <td>2012/10/13</td>
-                                            <td>$132,000</td>
-                                        </tr>
-                                        <tr role="row" class="odd">
-                                            <td tabindex="0" class="sorting_1">Bradley Greer</td>
-                                            <td>Software Engineer</td>
-                                            <td>London</td>
-                                            <td>41</td>
-                                            <td>2012/10/13</td>
-                                            <td>$132,000</td>
-                                        </tr>
-                                        <tr role="row" class="even">
-                                            <td tabindex="0" class="sorting_1">Brenden Wagner</td>
-                                            <td>Software Engineer</td>
-                                            <td>San Francisco</td>
-                                            <td>28</td>
-                                            <td>2011/06/07</td>
-                                            <td>$206,850</td>
-                                        </tr>
-                                        <tr role="row" class="odd">
-                                            <td tabindex="0" class="sorting_1">Brenden Wagner</td>
-                                            <td>Software Engineer</td>
-                                            <td>San Francisco</td>
-                                            <td>28</td>
-                                            <td>2011/06/07</td>
-                                            <td>$206,850</td>
-                                        </tr>
-                                        <tr role="row" class="even">
-                                            <td tabindex="0" class="sorting_1">Bruno Nash</td>
-                                            <td>Software Engineer</td>
-                                            <td>Edinburgh</td>
-                                            <td>21</td>
-                                            <td>2012/03/29</td>
-                                            <td>$433,060</td>
-                                        </tr>
-                                        <tr role="row" class="odd">
-                                            <td class="sorting_1" tabindex="0">Bruno Nash</td>
-                                            <td>Software Engineer</td>
-                                            <td>Edinburgh</td>
-                                            <td>21</td>
-                                            <td>2012/03/29</td>
-                                            <td>$433,060</td>
-                                        </tr>
-                                        <tr role="row" class="even">
-                                            <td tabindex="0" class="sorting_1">Caesar Vance</td>
-                                            <td>Pre-Sales Support</td>
-                                            <td>New York</td>
-                                            <td>29</td>
-                                            <td>2011/12/12</td>
-                                            <td>$106,450</td>
-                                        </tr>--%>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                        <div class="row">
+                        <%--<div class="row">
                             <div class="col-sm-12 col-md-5">
-                                <div class="dataTables_info" id="dataTable3_info" role="status" aria-live="polite">Showing 1 to 10 of 11 entries</div>
                             </div>
                             <div class="col-sm-12 col-md-7">
                                 <div class="dataTables_paginate paging_simple_numbers" id="dataTable3_paginate">
@@ -163,7 +90,7 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div>--%>
                     </div>
                 </div>
             </div>

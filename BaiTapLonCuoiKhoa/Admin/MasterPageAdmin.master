@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="Assets/AssetsAdmin/css/default-css.css">
     <link rel="stylesheet" href="Assets/AssetsAdmin/css/styles.css">
     <link rel="stylesheet" href="Assets/AssetsAdmin/css/responsive.css">
+    <link rel="stylesheet" href="Assets/AssetsAdmin/css/table.css">
+    <link rel="stylesheet" href="Assets/AssetsAdmin/css/table.min.css">
     <!-- modernizr css -->
     <script src="Assets/AssetsAdmin/js/vendor/modernizr-2.8.3.min.js"></script>
     
@@ -60,6 +62,9 @@
                                     <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-users"></i>
                                         <span>Users</span></a>
                                     <ul class="collapse">
+                                        <li><a href="/Admin/QlMembers/ListMembers.aspx">List Users</a></li>
+                                        <li><a href="/Admin/QlMembers/AddMember.aspx">Add User</a></li>
+                                        <li><a href="/Admin/QlMembers/UpdateMember.aspx">Update User</a></li>
                                     </ul>
                                 </li>
 
@@ -207,9 +212,7 @@
             ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
         </script>
         <!-- all line chart activation -->
-        <script src="Assets/AssetsAdmin/js/line-chart.js"></script>
         <!-- all pie chart -->
-        <script src="Assets/AssetsAdmin/js/pie-chart.js"></script>
         <!-- others plugins -->
         <script src="Assets/AssetsAdmin/js/plugins.js"></script>
         <script src="Assets/AssetsAdmin/js/scripts.js"></script>
