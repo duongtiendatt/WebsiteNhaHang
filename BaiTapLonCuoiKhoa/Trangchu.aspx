@@ -25,6 +25,7 @@
 
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/StyleCustom.css" rel="stylesheet" />
 </head>
 <body data-spy="scroll" data-target="#site-navbar" data-offset="200">
     <form id="form1" runat="server">
@@ -46,6 +47,17 @@
                         <li class="nav-item"><a href="#section-gallery" class="nav-link">Gallery</a></li>
                         <li class="nav-item"><a href="#section-contact" class="nav-link">Contact</a></li>
                         <li class="nav-item"><a href="/Client/Login.aspx" class="nav-link">Sign in</a></li>
+                        <li id="avatar">
+                            <div class="user-profile pull-right">
+                            <img class="avatar user-thumb" src="/Assets/AssetsAdmin/images/author/avatar.png" alt="avatar">
+                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Kumkum Rai <i class="fa fa-angle-down"></i></h4>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Message</a>
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <a class="dropdown-item" href="#">Log Out</a>
+                            </div>
+                        </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -797,8 +809,6 @@
 
 
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-        <script src="js/google-map.js"></script>
-
         <script src="js/main.js"></script>
     
     </div>
