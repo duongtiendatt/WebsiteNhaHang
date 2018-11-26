@@ -48,13 +48,14 @@ public partial class Admin_OrderTable_AddTable : System.Web.UI.Page
             tb.table_name = txtnametb.Text;
             tb.table_description = txtmato.Text;
             data.AddTable(tb);
-            mss.Text = "them thanh cong";
-            mss.ForeColor = System.Drawing.Color.Blue;
+            mss.Text = "Update success!";
+            mss.ForeColor = System.Drawing.Color.Green;
+            
         }
-        catch (Exception)
+        catch (Exception ex)
         {
 
-            mss.Text = "them khong thanh cong";
+            mss.Text = "Update Fail. Erorr: " + ex.Message + ". Let try!";
             mss.ForeColor = System.Drawing.Color.Red;
         }
 
