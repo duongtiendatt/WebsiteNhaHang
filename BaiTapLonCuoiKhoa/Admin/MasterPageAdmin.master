@@ -85,9 +85,11 @@
 
                                 <li>
                                     <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
-                                        <span>Order Tables</span></a>
+                                        <span>Tables</span></a>
                                     <ul class="collapse">
-                                        <li><a href="datatable.html">datatable</a></li>
+                                        <li><a href="/Admin/QLTable/ListTable.aspx">List Table</a></li>
+                                        <li><a href="/Admin/QLTable/AddTable.aspx">Add Table</a></li>
+                                        <li><a href="/Admin/QLTable/UpdateTable.aspx">Update Table</a></li>
                                     </ul>
                                 </li>
                                 <li>
