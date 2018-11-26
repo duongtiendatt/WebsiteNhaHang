@@ -14,6 +14,9 @@ public partial class Admin_OrderTable_AddTable : System.Web.UI.Page
 
     }
 
+<<<<<<< HEAD
+    protected void add_Click(object sender, EventArgs e)
+=======
 
 
 
@@ -41,10 +44,33 @@ public partial class Admin_OrderTable_AddTable : System.Web.UI.Page
     //}
 
     protected void btnsubmit_Click(object sender, EventArgs e)
+>>>>>>> b8bf9fcfe19b53adda305f766dce55e4a9ac7200
     {
         try
         {
             table tb = new table();
+<<<<<<< HEAD
+            tb.table_name = txthoten.Text;
+            tb.Mota = txtdiachi.Text;
+            s.dienthoai = txtdienthoai.Text;
+            s.malop = int.Parse(drlop.SelectedValue);
+            data.them(s);
+            mss.Text = "them thanh cong";
+            mss.ForeColor = System.Drawing.Color.Blue;
+        }
+        catch (Exception)
+        {
+
+            mss.Text = "them khong thanh cong";
+            mss.ForeColor = System.Drawing.Color.Red;
+        }
+
+
+    }
+
+
+
+=======
             tb.table_name = txtnametb.Text;
             tb.table_description = txtmato.Text;
             data.AddTable(tb);
@@ -60,4 +86,5 @@ public partial class Admin_OrderTable_AddTable : System.Web.UI.Page
         }
 
     }
+>>>>>>> b8bf9fcfe19b53adda305f766dce55e4a9ac7200
 }

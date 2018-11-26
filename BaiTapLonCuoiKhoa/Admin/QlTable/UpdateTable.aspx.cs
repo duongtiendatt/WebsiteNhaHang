@@ -7,6 +7,11 @@ using System.Web.UI.WebControls;
 
 public partial class Admin_QlTable_UpdateTable : System.Web.UI.Page
 {
+<<<<<<< HEAD
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+=======
     DataUtil data = new DataUtil();
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -34,10 +39,34 @@ public partial class Admin_QlTable_UpdateTable : System.Web.UI.Page
             }
             
         }
+>>>>>>> b8bf9fcfe19b53adda305f766dce55e4a9ac7200
     }
 
 
 
+<<<<<<< HEAD
+    protected void addtb_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            table tb = new table();
+            tb.table_name = txthoten.Text;
+            s.diachi = txtdiachi.Text;
+            s.dienthoai = txtdienthoai.Text;
+            s.malop = int.Parse(drlop.SelectedValue);
+            data.them(s);
+            mss.Text = "them thanh cong";
+            mss.ForeColor = System.Drawing.Color.Blue;
+        }
+        catch (Exception)
+        {
+
+            mss.Text = "them khong thanh cong";
+            mss.ForeColor = System.Drawing.Color.Red;
+        }
+
+
+=======
 
 
     protected void updattb_Click(object sender, EventArgs e)
@@ -71,5 +100,6 @@ public partial class Admin_QlTable_UpdateTable : System.Web.UI.Page
             mss.Text = "Update Fail. Erorr: " + ex.Message + ". Let try!";
             mss.ForeColor = System.Drawing.Color.Red;
         }
+>>>>>>> b8bf9fcfe19b53adda305f766dce55e4a9ac7200
     }
 }

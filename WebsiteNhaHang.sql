@@ -28,6 +28,7 @@ create table Member
 	member_status int,
 	member_type int
 )
+insert into Member values('trong','113','phamtrong131997@gmail.com','trong','1',0,1)
 go
 
 

@@ -12,12 +12,18 @@ public partial class Tranchu : System.Web.UI.Page
         var member = (Member)Session["User"];
         if (member != null)
         {
-            //nameuser.Text = member.member_fullname;
+            nameuser.Text = member.member_fullname;
             avatar.Style.Add("display", "block");
             login.Style.Add("display", "none");
         }
         else
         {
         }
+    }
+
+    protected void LogOut_Click(Object sender, EventArgs e)
+    {
+        Session["User"] = null;
+        Response.Redirect("TrangChu.aspx");
     }
 }

@@ -10,6 +10,23 @@
             <form action="/Admin/QlTable/UpdateTable.aspx" runat="server">
                 <div class="card-body">
                     <h4 class="header-title">Update this Table </h4>
+<<<<<<< HEAD
+                    <div class="form-group">
+                        <label for="example-text-input" class="col-form-label">ID Table</label>
+                        <input class="form-control" type="text" id="IDTable">
+                    </div>
+                    <div class="form-group">
+                        <label for="example-text-input" class="col-form-label">Name Table</label>
+                        <input class="form-control" type="text" id="NameTable">
+                    </div>
+                    <div class="form-group">
+                        <label for="example-search-input" class="col-form-label">Mô tả</label>
+                        <input class="form-control" type="text" id="Mota">
+                    </div>
+
+                    
+                    <asp:Button Text="Update" runat="server" class="btn btn-primary mt-4 pr-4 pl-4" ID="addtb"  />
+=======
                     <asp:Label ID="mss" runat="server" />
                     <div class="form-group">
                         <label for="example-text-input" class="col-form-label">ID Table <label style="color: red">(*)</label></label>
@@ -41,6 +58,7 @@
 
                     
                     <asp:Button Text="Update" runat="server" class="btn btn-primary mt-4 pr-4 pl-4" ID="updattb" OnClick="updattb_Click"   />
+>>>>>>> b8bf9fcfe19b53adda305f766dce55e4a9ac7200
                     <asp:Button Text="Cancel" runat="server" class="btn btn-primary mt-4 pr-4 pl-4" ID="resetaaddtb"  />
                     
                     <br />
