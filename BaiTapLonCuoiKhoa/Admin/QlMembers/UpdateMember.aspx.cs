@@ -11,4 +11,9 @@ public partial class Admin_QlMembers_UpdateMember : System.Web.UI.Page
     {
 
     }
+
+    protected void btnsubmit_Click(object sender, EventArgs e)
+    {
+
+    }
 }

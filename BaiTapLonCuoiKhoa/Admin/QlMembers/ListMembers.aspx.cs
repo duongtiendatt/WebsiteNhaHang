@@ -15,4 +15,5 @@ public partial class Admin_QlMembers_ListMembers : System.Web.UI.Page
             List<Member> getListMembers = data.GetListMembers();
         }
     }
+
 }
