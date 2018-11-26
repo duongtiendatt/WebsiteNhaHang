@@ -10,6 +10,10 @@ public partial class Admin_QlMembers_AddMember : System.Web.UI.Page
     DataUtil data = new DataUtil();
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (IsPostBack)
+        {
+            msg.Text = "";
+        }
     }
 
 
@@ -27,6 +31,7 @@ public partial class Admin_QlMembers_AddMember : System.Web.UI.Page
                 member_phone = txtphone.Text,
                 member_username = txtusername.Text,
                 member_status = 1, ///Active
+                member_type = Convert.ToInt16(ddltype.SelectedValue.ToString())
             };
             data.AddNewUser(user);
             msg.Text = "Add success!";

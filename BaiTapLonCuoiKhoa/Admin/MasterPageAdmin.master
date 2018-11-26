@@ -63,7 +63,6 @@
                                     <ul class="collapse">
                                         <li><a href="/Admin/QlMembers/ListMembers.aspx">List Users</a></li>
                                         <li><a href="/Admin/QlMembers/AddMember.aspx">Add User</a></li>
-                                        <li><a href="/Admin/QlMembers/UpdateMember.aspx">Update User</a></li>
                                     </ul>
                                 </li>
 

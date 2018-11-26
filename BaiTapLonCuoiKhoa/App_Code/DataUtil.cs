@@ -137,6 +137,11 @@ public class DataUtil
         con.Close();
         return listMember;
     }
+
+    /// <summary>
+    /// add new user
+    /// </summary>
+    /// <param name="member"></param>
     public void AddNewUser(Member member)
     {
         string sql = "insert into Member values(@fullname,@phone, @mail, @username, @password, @status, @type)";
@@ -149,6 +154,56 @@ public class DataUtil
         cmd.Parameters.AddWithValue("password", member.member_password);
         cmd.Parameters.AddWithValue("status", member.member_status);
         cmd.Parameters.AddWithValue("type", member.member_type);
+
+        cmd.ExecuteNonQuery();
+        con.Close();
+    }
+
+
+    /// <summary>
+    /// Get info User by id
+    /// </summary>
+    /// <param name="idmember"></param>
+    /// <returns></returns>
+    public Member GetUser(int idmember)
+    {
+
+        string sql = "select * from Member where member_id=@idmember";
+        con.Open();
+        SqlCommand cmd = new SqlCommand(sql, con);
+        cmd.Parameters.AddWithValue("idmember", idmember);
+        SqlDataReader dr = cmd.ExecuteReader();
+
+        Member mb = new Member();
+
+        while (dr.Read())
+        {
+            mb.member_id = (int)dr["member_id"];
+            mb.member_status = (int)dr["member_status"];
+            mb.member_type = (int)dr["member_type"];
+            mb.member_fullname = (string)dr["member_fullname"];
+            mb.member_mail = (string)dr["member_mail"];
+            mb.member_password = (string)dr["member_password"];
+            mb.member_phone = (string)dr["member_phone"];
+            mb.member_username = (string)dr["member_username"];
+        }
+        con.Close();
+        return mb;
+    }
+
+
+    public void UpdateUser(Member member)
+    {
+        string sql = "update Member set member_fullname=@fullname, member_mail=@mail, member_phone=@phone, member_status=@status, member_type=@type where member_id=@id";
+        con.Open();
+        SqlCommand cmd = new SqlCommand(sql, con);
+        cmd.Parameters.AddWithValue("fullname", member.member_fullname);
+        cmd.Parameters.AddWithValue("phone", member.member_phone);
+        cmd.Parameters.AddWithValue("mail", member.member_mail);
+        cmd.Parameters.AddWithValue("username", member.member_username);
+        cmd.Parameters.AddWithValue("status", member.member_status);
+        cmd.Parameters.AddWithValue("type", member.member_type);
+        cmd.Parameters.AddWithValue("id", member.member_id);
 
         cmd.ExecuteNonQuery();
         con.Close();
