@@ -94,8 +94,8 @@ public class DataUtil
         cmd.Parameters.AddWithValue("table_name", tb.table_name);
         cmd.Parameters.AddWithValue("table_status", tb.table_status);
         cmd.Parameters.AddWithValue("table_description", tb.table_description);
-        cmd.Parameters.AddWithValue("table_id",tb.table_id);
-        
+        cmd.Parameters.AddWithValue("table_id", tb.table_id);
+
         cmd.ExecuteNonQuery();
         con.Close();
     }
@@ -105,6 +105,8 @@ public class DataUtil
 
 
 
+
+    #region DatRegion
     /// <summary>
     /// Get list members
     /// created by : Dat 25-11-2018
@@ -135,6 +137,25 @@ public class DataUtil
         con.Close();
         return listMember;
     }
+    public void AddNewUser(Member member)
+    {
+        string sql = "insert into Member values(@fullname,@phone, @mail, @username, @password, @status, @type)";
+        con.Open();
+        SqlCommand cmd = new SqlCommand(sql, con);
+        cmd.Parameters.AddWithValue("fullname", member.member_fullname);
+        cmd.Parameters.AddWithValue("phone", member.member_phone);
+        cmd.Parameters.AddWithValue("mail", member.member_mail);
+        cmd.Parameters.AddWithValue("username", member.member_username);
+        cmd.Parameters.AddWithValue("password", member.member_password);
+        cmd.Parameters.AddWithValue("status", member.member_status);
+        cmd.Parameters.AddWithValue("type", member.member_type);
+
+        cmd.ExecuteNonQuery();
+        con.Close();
+    }
+    #endregion
+
+
 
 }
 

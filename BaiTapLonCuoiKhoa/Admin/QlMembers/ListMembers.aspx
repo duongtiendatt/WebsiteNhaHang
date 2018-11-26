@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="LinkPageAdmin" runat="Server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentRight" runat="Server">
-    <form runat="server" action="/Admin/QlMembers/ListMembers.aspx">
+    <form runat="server" >
         <div class="col-12 mt-5">
             <div class="card">
                 <div class="card-body">

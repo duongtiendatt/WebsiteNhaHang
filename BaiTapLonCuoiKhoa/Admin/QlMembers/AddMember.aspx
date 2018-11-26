@@ -11,26 +11,29 @@
             <div class="card-body">
                 <form id="formadduser" runat="server" action="/Admin/QlMembers/AddMember.aspx">
                     <h4 class="header-title">Add a new user to website</h4>
+                    <asp:Label ID="msg" runat="server"/>
+
                     <div class="form-group">
-                        <label for="example-text-input" class="col-form-label">Full name (*)</label>
+                        <label for="example-text-input" class="col-form-label">Full name <label style="color: red">(*)</label></label>
                         <asp:TextBox runat="server" ID="txtfullname" placeholder="Example: Dương Tiến Đạt" CssClass="form-control" />
                         <asp:RequiredFieldValidator ID="refullname" runat="server" ErrorMessage="The field is required" ControlToValidate="txtfullname" Display="Dynamic" ForeColor="Red" />
                     </div>
                     <div class="form-group">
-                        <label for="example-search-input" class="col-form-label">User name (*)</label>
+                        <label for="example-search-input" class="col-form-label">User name <label style="color: red">(*)</label></label>
                         <asp:TextBox runat="server" ID="txtusername" placeholder="Example: duongtiendat" CssClass="form-control" />
                         <asp:RequiredFieldValidator ID="reusername" runat="server" ErrorMessage="The field is required" ControlToValidate="txtusername" Display="Dynamic" ForeColor="Red" />
+                        <asp:RegularExpressionValidator ID="regusername" runat="server" ErrorMessage="Minimum is 6" ControlToValidate="txtusername" ValidationExpression=".{5,}" ForeColor="Red" Display="Dynamic"></asp:RegularExpressionValidator>
                     </div>
                     <div class="form-group">
-                        <label for="example-email-input" class="col-form-label">Email (*)</label>
+                        <label for="example-email-input" class="col-form-label">Email <label style="color: red">(*)</label></label>
                         <asp:TextBox runat="server" ID="txtemail" placeholder="Example: name@example.com" CssClass="form-control" />
                         <asp:RequiredFieldValidator ID="reemail" runat="server" ErrorMessage="The field is required" ControlToValidate="txtemail" Display="Dynamic" ForeColor="Red" />
-                        <asp:RegularExpressionValidator ID="regemail" runat="server" ControlToValidate="txtemail" ErrorMessage="Hãy nhập đúng định dạng" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red" />
+                        <asp:RegularExpressionValidator ID="regemail" runat="server" ControlToValidate="txtemail" ErrorMessage="Wrong format" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red" />
                     </div>
                     <div class="form-group">
-                        <label for="example-tel-input" class="col-form-label">Telephone (*)</label>
+                        <label for="example-tel-input" class="col-form-label">Telephone <label style="color: red">(*)</label></label>
                         <asp:TextBox runat="server" ID="txtphone" placeholder="Example: 0336515294" CssClass="form-control" TextMode="Phone" />
-                        <asp:RegularExpressionValidator ID="regphone" runat="server" ErrorMessage="Hãy nhập đúng định dạng ít nhất là 9 chữ số" Display="Dynamic" ControlToValidate="txtphone" ForeColor="Red" ValidationExpression="\d{9}" />
+                        <asp:RegularExpressionValidator ID="regphone" runat="server" ErrorMessage="Required 10 numbers" Display="Dynamic" ControlToValidate="txtphone" ForeColor="Red" ValidationExpression="\d{10}" />
                         <asp:RequiredFieldValidator ID="rephone" runat="server" ErrorMessage="The field is required" Display="Dynamic" ControlToValidate="txtphone" ForeColor="Red" />
                     </div>
                     <div class="form-group">
