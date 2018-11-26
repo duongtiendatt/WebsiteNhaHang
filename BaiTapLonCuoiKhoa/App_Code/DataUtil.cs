@@ -200,7 +200,6 @@ public class DataUtil
         cmd.Parameters.AddWithValue("fullname", member.member_fullname);
         cmd.Parameters.AddWithValue("phone", member.member_phone);
         cmd.Parameters.AddWithValue("mail", member.member_mail);
-        cmd.Parameters.AddWithValue("username", member.member_username);
         cmd.Parameters.AddWithValue("status", member.member_status);
         cmd.Parameters.AddWithValue("type", member.member_type);
         cmd.Parameters.AddWithValue("id", member.member_id);

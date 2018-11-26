@@ -46,11 +46,11 @@
                         <li class="nav-item"><a href="#section-news" class="nav-link">News</a></li>
                         <li class="nav-item"><a href="#section-gallery" class="nav-link">Gallery</a></li>
                         <li class="nav-item"><a href="#section-contact" class="nav-link">Contact</a></li>
-                        <li class="nav-item"><a href="/Client/Login.aspx" class="nav-link">Sign in</a></li>
-                        <li id="avatar">
+                        <li class="nav-item"  id="login" runat="server"><a href="/Client/Login.aspx" class="nav-link">Sign in</a></li>
+                        <li id="avatar" runat="server" style="display:none">
                             <div class="user-profile pull-right">
                             <img class="avatar user-thumb" src="/Assets/AssetsAdmin/images/author/avatar.png" alt="avatar">
-                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Kumkum Rai <i class="fa fa-angle-down"></i></h4>
+                            <h4 class="user-name dropdown-toggle nav-link" data-toggle="dropdown">Kumkum Rai <i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Message</a>
                                 <a class="dropdown-item" href="#">Settings</a>

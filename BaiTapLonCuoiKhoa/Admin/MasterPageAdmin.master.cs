@@ -9,6 +9,14 @@ public partial class Admin_MasterPageAdmin : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        var member = (Member) Session["User"];
+        if(member != null)
+        {
+            nameuser.Text = member.member_fullname;
+        }
+        else
+        {
+            Response.Redirect("/Admin/AdminLogin.aspx");
+        }
     }
 }

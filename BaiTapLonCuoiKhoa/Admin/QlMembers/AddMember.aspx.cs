@@ -38,9 +38,9 @@ public partial class Admin_QlMembers_AddMember : System.Web.UI.Page
             msg.ForeColor = System.Drawing.Color.Green;
             ReloadPage();
         }
-        catch (Exception)
+        catch (Exception ex)
         {
-            msg.Text = "Add Fail. Let try!";
+            msg.Text = "Add Fail. Erorr: "+ex.Message+". Let try!";
             msg.ForeColor = System.Drawing.Color.Red;
         }
     }

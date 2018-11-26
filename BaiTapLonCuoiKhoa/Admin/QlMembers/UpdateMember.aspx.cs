@@ -10,10 +10,7 @@ public partial class Admin_QlMembers_UpdateMember : System.Web.UI.Page
     DataUtil data = new DataUtil();
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
-        {
-            ShowInfoUser();
-        }
+        ShowInfoUser();
     }
 
     private void ShowInfoUser()
@@ -22,7 +19,7 @@ public partial class Admin_QlMembers_UpdateMember : System.Web.UI.Page
         if (!string.IsNullOrEmpty(id))
         {
             var member = data.GetUser(Convert.ToInt16(id));
-            Session["User"] = member as Member;
+            Session["IdUser"] = id;
             txtfullname.Text = member.member_fullname;
             txtphone.Text = member.member_phone;
             txtemail.Text = member.member_mail;
@@ -43,16 +40,17 @@ public partial class Admin_QlMembers_UpdateMember : System.Web.UI.Page
                 member_mail = txtemail.Text,
                 member_phone = txtphone.Text,
                 member_status = Convert.ToInt16(ddlstatus.SelectedValue.ToString()), ///Active
-                member_type = Convert.ToInt16(ddltype.SelectedValue.ToString())
+                member_type = Convert.ToInt16(ddltype.SelectedValue.ToString()),
+                member_id = Convert.ToInt16(Session["IdUser"].ToString())
             };
             data.UpdateUser(user);
             msg.Text = "Update success!";
             msg.ForeColor = System.Drawing.Color.Green;
             ShowInfoUser();
         }
-        catch (Exception)
+        catch (Exception ex)
         {
-            msg.Text = "Update Fail. Let try!";
+            msg.Text = "Update Fail. Erorr: " + ex.Message + ". Let try!";
             msg.ForeColor = System.Drawing.Color.Red;
         }
     }

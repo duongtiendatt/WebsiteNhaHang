@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Client_Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AdminLogin.aspx.cs" Inherits="Admin_AdminLogin" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>DDHT || SIGN IN</title>
+    <title>DDHT || Login admin</title>
     <base href="../Assets/AssetsAdmin/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="images/icon/favicon.ico">
@@ -28,7 +28,7 @@
 
     <link href="/Assets/css/StyleCustom.css" rel="stylesheet" />
 </head>
-<body data-spy="scroll" data-target="#site-navbar" data-offset="5">
+<body>
     <div>
         <nav class="navbar navbar-expand-lg navbar-dark site_navbar bg-dark site-navbar-light login-page" id="site-navbar">
             <div class="container">
@@ -39,10 +39,10 @@
     <div class="login-area">
         <div class="container">
             <div class="login-box ptb--100">
-                <form id="form1" runat="server">
+                <form id="form2" runat="server">
                     <div class="login-form-head">
-                        <h4>Sign In</h4>
-                        <p>Hello there, Sign in and start using website</p>
+                        <h4>Sign In Admin</h4>
+                        <p>Sign in to manager your website</p>
                     </div>
                     <div class="login-form-body">
                         <div class="form-gp">
@@ -64,9 +64,6 @@
                         </div>
                         <div class="submit-btn-area">
                             <button id="form_submit" type="submit">Submit <i class="ti-arrow-right"></i></button>
-                        </div>
-                        <div class="form-footer text-center mt-5">
-                            <p class="text-muted">Don't have an account? <a href="/Client/Register.aspx">Sign up</a></p>
                         </div>
                     </div>
                 </form>
