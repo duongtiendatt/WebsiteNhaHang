@@ -34,11 +34,21 @@ go
 create table OrderTable
 (
 	ordertable_id int primary key identity(1,1),
-	ordertable_timeset datetime,
-	ordertable_quantity int,
-	ordertable_status int,
 	ordertable_iduser int constraint FK_OrderTable_Member foreign key references Member(member_id),
+	ordertable_timeset datetime,	
+	ordertable_idtable int constraint FK_OrderTable_table foreign key references qlTable(table_id),
+	ordertable_status bit,
 )
+insert into OrderTable values(1,'2018-5-6',1,1)
+insert into OrderTable values(1,'2018-5-9',1,1)
+insert into OrderTable values(1,'2018-2-6',1,0)
+
+
+insert into Member()
+
+select * from Member
+drop table OrderTable
+insert into OrderTable values('2018/1/5',1)
 go
 create table OrderFood
 (
@@ -53,3 +63,10 @@ create table OrderFood
 
 )
 go
+create table qlTable
+(
+	table_id int primary key identity(1,1),
+	table_name varchar(10),
+	table_status bit,
+	table_description ntext
+)

@@ -64,7 +64,7 @@
                             </div>
                         </div>
                         <div class="submit-btn-area">
-                            <asp:Button CssClass="btn btn-primary" runat="server" ID="btnsubmit" Text="ADD"><i class="ti-arrow-right"></i></asp:Button>
+                            <asp:Button CssClass="btn btn-primary" runat="server" ID="btnsubmit" Text="ADD"></asp:Button>
                             <%--<button id="form_submit" type="submit">Submit </button>--%>
                             <%--OnClick="btnsubmit_Click"--%>
                         </div>
