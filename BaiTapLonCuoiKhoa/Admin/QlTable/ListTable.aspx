@@ -63,7 +63,7 @@
                                                     Response.Write("<td>Chưa được đặt</td>");
                                                 }
                                                 Response.Write("<td>"+tb.table_description+"</td>");
-                                                Response.Write("<td><a href='/Admin/QLTable/DeleteTable.aspx'>Xóa</a> | <a href='/Admin/QLTable/UpdateTable.aspx?idtable="+tb.table_id+"'>Sửa</a></td>");
+                                                Response.Write("<td><a href='/Admin/QLTable/DeleteTable.aspx?idtable="+tb.table_id+"'>Xóa</a> | <a href='/Admin/QLTable/UpdateTable.aspx?idtable="+tb.table_id+"'>Sửa</a></td>");
                                                 Response.Write("</tr>");
 
                                                
