@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -27,7 +28,7 @@ public partial class Admin_QlMembers_AddMember : System.Web.UI.Page
             {
                 member_fullname = txtfullname.Text,
                 member_mail = txtemail.Text,
-                member_password = txtpassword.Text,
+                member_password = Encryptor.MD5Hash(txtpassword.Text),
                 member_phone = txtphone.Text,
                 member_username = txtusername.Text,
                 member_status = 1, ///Active

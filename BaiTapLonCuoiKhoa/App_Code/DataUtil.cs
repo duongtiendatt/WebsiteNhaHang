@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
 using System.Data.Sql;
-
+using System.Data.Odbc;
 
 /// <summary>
 /// Summary description for DataUtil
@@ -192,6 +192,37 @@ public class DataUtil
     }
 
 
+    public Member GetUserByName(string username)
+    {
+
+        string sql = "select * from Member where member_username=@username or member_mail=@username";
+        con.Open();
+        SqlCommand cmd = new SqlCommand(sql, con);
+        cmd.Parameters.AddWithValue("username", username);
+        SqlDataReader dr = cmd.ExecuteReader();
+
+        Member mb = new Member();
+
+        while (dr.Read())
+        {
+            mb.member_id = (int)dr["member_id"];
+            mb.member_status = (int)dr["member_status"];
+            mb.member_type = (int)dr["member_type"];
+            mb.member_fullname = (string)dr["member_fullname"];
+            mb.member_mail = (string)dr["member_mail"];
+            mb.member_password = (string)dr["member_password"];
+            mb.member_phone = (string)dr["member_phone"];
+            mb.member_username = (string)dr["member_username"];
+        }
+        con.Close();
+        return mb;
+    }
+
+
+    /// <summary>
+    /// Update user
+    /// </summary>
+    /// <param name="member"></param>
     public void UpdateUser(Member member)
     {
         string sql = "update Member set member_fullname=@fullname, member_mail=@mail, member_phone=@phone, member_status=@status, member_type=@type where member_id=@id";
@@ -206,6 +237,28 @@ public class DataUtil
 
         cmd.ExecuteNonQuery();
         con.Close();
+    }
+
+
+
+    public bool CheckLogin(string username, string password, int type)
+    {
+        string sql = "select * from Member where (member_username = @username or member_mail = @username) and member_password = @password and member_type=@type";
+        con.Open();
+        SqlCommand cmd = new SqlCommand(sql, con);
+        //OdbcCommand command = new OdbcCommand(sql, con);
+
+        cmd.Parameters.AddWithValue("username", username);
+        cmd.Parameters.AddWithValue("password", password);
+        cmd.Parameters.AddWithValue("type", type);
+
+        Int32 count = Convert.ToInt32(cmd.ExecuteScalar());
+        con.Close();
+
+        if (count > 0)
+            return true;
+        else
+            return false;
     }
     #endregion
 

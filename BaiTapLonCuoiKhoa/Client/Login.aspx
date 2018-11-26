@@ -39,16 +39,15 @@
     <div class="login-area">
         <div class="container">
             <div class="login-box ptb--100">
-                <form id="form1" runat="server">
+                <form id="form1" runat="server" action="/Client/Login.aspx">
                     <div class="login-form-head">
                         <h4>Sign In</h4>
                         <p>Hello there, Sign in and start using website</p>
                     </div>
                     <div class="login-form-body">
                         <div class="form-gp">
-                            <label for="txtusername">Email address</label>
+                            <label for="txtusername">Email or Username</label>
                             <asp:TextBox runat="server" ID="txtusername" CssClass="form-control" Text="" />
-                            <%--<input type="email" id="exampleInputEmail1">--%>
                             <i class="ti-email"></i>
                         </div>
                         <div class="form-gp">
@@ -64,9 +63,7 @@
                             </div>
                         </div>
                         <div class="submit-btn-area">
-                            <asp:Button CssClass="btn btn-primary" runat="server" ID="btnsubmit" Text="ADD"><i class="ti-arrow-right"></i></asp:Button>
-                            <%--<button id="form_submit" type="submit">Submit </button>--%>
-                            <%--OnClick="btnsubmit_Click"--%>
+                            <asp:Button CssClass="btn btn-primary" runat="server" ID="btnLogin" Text="SIGN IN" OnClick="btnLogin_Click"/>
                         </div>
                         <div class="form-footer text-center mt-5">
                             <p class="text-muted">Don't have an account? <a href="/Client/Register.aspx">Sign up</a></p>
