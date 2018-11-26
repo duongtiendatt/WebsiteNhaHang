@@ -37,42 +37,62 @@
     <div class="login-area">
         <div class="container">
             <div class="login-box ptb--100">
-                <form id="form1" runat="server">
+                <form id="form1" runat="server" action="/Client/Register.aspx">
                     <div class="login-form-head">
                         <h4>Sign up</h4>
                         <p>Hello there, Sign up and Join with Us</p>
                     </div>
                     <div class="login-form-body">
                         <div class="form-gp">
-                            <label for="exampleInputName1">Full Name</label>
-                            <input type="text" id="exampleInputName1">
+                            <label for="txtfullname">Full Name</label>
+                            <asp:TextBox runat="server" ID="txtfullname" />
+                            <asp:RequiredFieldValidator ID="refullname" runat="server" ErrorMessage="The field is required" ControlToValidate="txtfullname" Display="Dynamic" ForeColor="Red" />
                             <i class="ti-user"></i>
                         </div>
                         <div class="form-gp">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" id="exampleInputEmail1">
+                            <label for="txtconfirmpassword">User name</label>
+                            <asp:TextBox runat="server" ID="txtusername" />
+                            <asp:RequiredFieldValidator ID="reusername" runat="server" ErrorMessage="The field is required" ControlToValidate="txtusername" Display="Dynamic" ForeColor="Red" />
+                            <asp:RegularExpressionValidator ID="regusername" runat="server" ErrorMessage="Username in the range of 6 to 15 characters" ControlToValidate="txtusername" ValidationExpression=".{6,15}" ForeColor="Red" Display="Dynamic"></asp:RegularExpressionValidator>
+                            <i class="ti-user"></i>
+                        </div>
+                        <div class="form-gp">
+                            <label for="txtphone">Phone</label>
+                            <asp:TextBox runat="server" ID="txtphone" TextMode="Phone" />
+                            <asp:RegularExpressionValidator ID="regphone" runat="server" ErrorMessage="Username in the range of 9 to 11 numbers" Display="Dynamic" ControlToValidate="txtphone" ForeColor="Red" ValidationExpression=".{9,11}" />
+                            <asp:RequiredFieldValidator ID="rephone" runat="server" ErrorMessage="The field is required" Display="Dynamic" ControlToValidate="txtphone" ForeColor="Red" />
+                            <i class="ti-lock"></i>
+                        </div>
+                        <div class="form-gp">
+                            <label for="txtemail">Email address</label>
+                            <asp:TextBox runat="server" ID="txtemail" CssClass="form-control" />
+                            <asp:RequiredFieldValidator ID="reemail" runat="server" ErrorMessage="The field is required" ControlToValidate="txtemail" Display="Dynamic" ForeColor="Red" />
+                            <asp:RegularExpressionValidator ID="regemail" runat="server" ControlToValidate="txtemail" ErrorMessage="Wrong format" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red" />
                             <i class="ti-email"></i>
                         </div>
                         <div class="form-gp">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" id="exampleInputPassword1">
+                            <label for="txtpassword">Password</label>
+                            <asp:TextBox runat="server" ID="txtpassword" CssClass="form-control" TextMode="Password" />
+                            <asp:RequiredFieldValidator ID="repassword" runat="server" ErrorMessage="The field is required" ForeColor="Red" ControlToValidate="txtpassword" Display="Dynamic"></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="regpassword" runat="server" ErrorMessage="Username in the range of 6 to 15 numbers" ControlToValidate="txtpassword" ValidationExpression=".{6,15}" ForeColor="Red" Display="Dynamic"></asp:RegularExpressionValidator>
                             <i class="ti-lock"></i>
                         </div>
                         <div class="form-gp">
-                            <label for="exampleInputPassword2">Confirm Password</label>
-                            <input type="password" id="exampleInputPassword2">
+                            <label for="txtconfirmpassword">Confirm Password</label>
+                            <asp:TextBox runat="server" ID="txtconfirmpassword" CssClass="form-control" TextMode="Password" />
+                            <asp:CompareValidator ID="compassword" runat="server" ControlToCompare="txtpassword" ControlToValidate="txtconfirmpassword" ErrorMessage="Password not match" ForeColor="Red"></asp:CompareValidator>
                             <i class="ti-lock"></i>
                         </div>
-                        <div class="submit-btn-area">
-                            <button id="form_submit" type="submit">Submit <i class="ti-arrow-right"></i></button>
-                        </div>
-                        <div class="form-footer text-center mt-5">
-                            <p class="text-muted">Have an account? <a href="/Client/Login.aspx">Sign in</a></p>
-                        </div>
+                    </div>
+                    <div class="submit-btn-area">
+                        <asp:Button CssClass="btn btn-primary mt-4 pr-4 pl-4" runat="server" ID="btnregister" Text="REGISTER" OnClick="btnregister_Click"/>
+                    </div>
+                    <div class="form-footer text-center mt-5">
+                        <p class="text-muted">Have an account? <a href="/Client/Login.aspx">Sign in</a></p>
                     </div>
                 </form>
             </div>
-        </div>
+    </div>
     </div>
 
     <!-- jquery latest version -->

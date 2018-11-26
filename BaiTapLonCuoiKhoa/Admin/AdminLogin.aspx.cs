@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Client_Login : System.Web.UI.Page
+public partial class Admin_AdminLogin : System.Web.UI.Page
 {
     DataUtil data = new DataUtil();
     protected void Page_Load(object sender, EventArgs e)
@@ -17,22 +17,16 @@ public partial class Client_Login : System.Web.UI.Page
     protected void btnLogin_Click(object sender, EventArgs e)
     {
         var passwordHash = Encryptor.MD5Hash(txtpassword.Text);
-        var type = 0; /// type 0 is user
+        var type = 1; /// type 1 is admin
         var checkLogin = data.CheckLogin(txtusername.Text, passwordHash, type);
         if (checkLogin)
         {
-            Session["User"] = data.GetUserByName(txtusername.Text);
-            Response.Redirect("/TrangChu.aspx");
+            Session["UserAdmin"] = data.GetUserByName(txtusername.Text);
+            Response.Redirect("/Admin/Dashboard.aspx");
         }
         else
         {
 
         }
-    }
-
-    private bool CheckLogin(string username, string password)
-    {
-
-        return true;
     }
 }

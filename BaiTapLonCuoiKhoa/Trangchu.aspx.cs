@@ -9,9 +9,21 @@ public partial class Tranchu : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
+        var member = (Member)Session["User"];
+        if (member != null)
         {
-            
+            nameuser.Text = member.member_fullname;
+            avatar.Style.Add("display", "block");
+            login.Style.Add("display", "none");
         }
+        else
+        {
+        }
+    }
+
+    protected void LogOut_Click(Object sender, EventArgs e)
+    {
+        Session["User"] = null;
+        Response.Redirect("TrangChu.aspx");
     }
 }

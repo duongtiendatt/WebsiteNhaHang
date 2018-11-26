@@ -37,12 +37,20 @@
                                 <table id="dataTable3" class="text-center dataTable no-footer dtr-inline" role="grid" aria-describedby="dataTable3_info" style="width: 959px;">
                                     <thead class="text-capitalize">
                                         <tr role="row">
+<<<<<<< HEAD
                                             <th class="sorting_asc" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 50px;" aria-sort="ascending" >ID bàn</th>
                                             <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 50px;" >Tên bàn</th>
                                             <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 94px;">Trạng thái</th>
                                             <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 100px;">Mô tả</th>
                                             <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 50px;" >Xóa</th>
                                             <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 50px;" >Sửa </th>
+=======
+                                            <th class="sorting_asc" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 111px;" aria-sort="ascending" >ID bàn</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 226px;" >Tên bàn</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 94px;" >Trạng thái</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 54px;" >Mô tả</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 54px;" >Xóa</th>
+>>>>>>> b8bf9fcfe19b53adda305f766dce55e4a9ac7200
                                             <%--<th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 109px;" aria-label="Type Date: activate to sort column ascending">Type</th>--%>
                                             <%--<th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 77px;" aria-label="salary: activate to sort column ascending">salary</th>--%>
                                         </tr>
@@ -65,8 +73,12 @@
                                                     Response.Write("<td>Chưa được đặt</td>");
                                                 }
                                                 Response.Write("<td>"+tb.table_description+"</td>");
+<<<<<<< HEAD
                                                 Response.Write("<td>  <button type='button' class='btn btn-primary mt-4 pr-4 pl-4' id='btnxoatb'>Xáo</button> </td>");
                                                  Response.Write("<td>  <button type='button' class='btn btn-primary mt-4 pr-4 pl-4' id='btnsuatb'>Sửa</button> </td>");
+=======
+                                                Response.Write("<td><a href='/Admin/QLTable/DeleteTable.aspx?idtable="+tb.table_id+"'>Xóa</a> | <a href='/Admin/QLTable/UpdateTable.aspx?idtable="+tb.table_id+"'>Sửa</a></td>");
+>>>>>>> b8bf9fcfe19b53adda305f766dce55e4a9ac7200
                                                 Response.Write("</tr>");
                                                 
 
