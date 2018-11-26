@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/MasterPageAdmin.master" AutoEventWireup="true" CodeFile="ListTable.aspx.cs" Inherits="Admin_QlTable_ListTable" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="titleAdmin" Runat="Server">
+    DDHT || List tables
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="LinkPageAdmin" Runat="Server">
 </asp:Content>
@@ -36,10 +37,12 @@
                                 <table id="dataTable3" class="text-center dataTable no-footer dtr-inline" role="grid" aria-describedby="dataTable3_info" style="width: 959px;">
                                     <thead class="text-capitalize">
                                         <tr role="row">
-                                            <th class="sorting_asc" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 111px;" aria-sort="ascending" aria-label="Fullname: activate to sort column descending">ID bàn</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 226px;" aria-label="Phone: activate to sort column ascending">Tên bàn</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 94px;" aria-label="Mail: activate to sort column ascending">Trạng thái</th>
-                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 54px;" aria-label="Username: activate to sort column ascending">Mô tả</th>
+                                            <th class="sorting_asc" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 50px;" aria-sort="ascending" >ID bàn</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 50px;" >Tên bàn</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 94px;">Trạng thái</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 100px;">Mô tả</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 50px;" >Xóa</th>
+                                            <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 50px;" >Sửa </th>
                                             <%--<th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 109px;" aria-label="Type Date: activate to sort column ascending">Type</th>--%>
                                             <%--<th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 77px;" aria-label="salary: activate to sort column ascending">salary</th>--%>
                                         </tr>
@@ -62,7 +65,10 @@
                                                     Response.Write("<td>Chưa được đặt</td>");
                                                 }
                                                 Response.Write("<td>"+tb.table_description+"</td>");
+                                                Response.Write("<td>  <button type='button' class='btn btn-primary mt-4 pr-4 pl-4' id='btnxoatb'>Xáo</button> </td>");
+                                                 Response.Write("<td>  <button type='button' class='btn btn-primary mt-4 pr-4 pl-4' id='btnsuatb'>Sửa</button> </td>");
                                                 Response.Write("</tr>");
+                                                
 
                                                
                                             }
@@ -151,6 +157,7 @@
                                 </table>
                             </div>
                         </div>
+                        <button type="button" class="btn btn-primary mt-4 pr-4 pl-4" >Thêm bàn</button>
                         <div class="row">
                             <div class="col-sm-12 col-md-5">
                                 <div class="dataTables_info" id="dataTable3_info" role="status" aria-live="polite">Showing 1 to 10 of 11 entries</div>

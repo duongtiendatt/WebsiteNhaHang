@@ -18,6 +18,11 @@ public class DataUtil
         con = new SqlConnection(sqlcon);
 
     }
+    /// <summary>
+    /// Get list tables
+    /// created by : Trong 25-11-2018
+    /// </summary>
+    /// <returns></returns>
 
     public List<table> dsTable()
     {

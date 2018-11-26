@@ -48,7 +48,7 @@
                                             <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 94px;" aria-label="Mail: activate to sort column ascending">Mail</th>
                                             <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 54px;" aria-label="Username: activate to sort column ascending">Username</th>
                                             <th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 109px;" aria-label="Type Date: activate to sort column ascending">Type</th>
-                                            <%--<th class="sorting" tabindex="0" aria-controls="dataTable3" rowspan="1" colspan="1" style="width: 77px;" aria-label="salary: activate to sort column ascending">salary</th>--%>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -69,11 +69,13 @@
                                                 {
                                                     Response.Write("<td>User</td>");
                                                 }
+                                                
                                                 Response.Write("</tr>");
 
                                             }
                                         %>
                                     </tbody>
+                                    
                                 </table>
                             </div>
                         </div>
