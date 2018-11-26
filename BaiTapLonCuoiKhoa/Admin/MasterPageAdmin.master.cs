@@ -9,8 +9,12 @@ public partial class Admin_MasterPageAdmin : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        var member = (Member) Session["User"];
-        if(member != null)
+        Session["User"] = new Member
+        {
+            member_fullname = "Đatj"
+        };
+        var member = (Member)Session["User"];
+        if (member != null)
         {
             nameuser.Text = member.member_fullname;
         }

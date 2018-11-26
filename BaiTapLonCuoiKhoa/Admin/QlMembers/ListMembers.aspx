@@ -70,8 +70,7 @@
                                                     {
                                                         Response.Write("<td>User</td>");
                                                     }
-                                                    string text = "Bạn có chắc chắn muốn xóa không?";
-                                                    Response.Write("<td><input type=button value=Delete onclick='return confirm('Bạn có chắc chắn muốn xóa không');'></td>");
+                                                    Response.Write("<td><a href='/Admin/QlMembers/DeleteTable.aspx'>Xóa</a> | <a href='/Admin/QlMembers/UpdateMember.aspx?idmember="+mb.member_id+"'>Sửa</a></td>");
                                                     Response.Write("</tr>");
 
                                                 }
