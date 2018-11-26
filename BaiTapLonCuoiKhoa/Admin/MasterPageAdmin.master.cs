@@ -19,4 +19,10 @@ public partial class Admin_MasterPageAdmin : System.Web.UI.MasterPage
             Response.Redirect("/Admin/AdminLogin.aspx");
         }
     }
+
+    protected void LogOut_Click(Object sender, EventArgs e)
+    {
+        Session["User"] = null;
+        Response.Redirect("TrangChu.aspx");
+    }
 }

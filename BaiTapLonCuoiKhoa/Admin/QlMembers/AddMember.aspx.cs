@@ -34,14 +34,23 @@ public partial class Admin_QlMembers_AddMember : System.Web.UI.Page
                 member_status = 1, ///Active
                 member_type = Convert.ToInt16(ddltype.SelectedValue.ToString())
             };
-            data.AddNewUser(user);
-            msg.Text = "Add success!";
-            msg.ForeColor = System.Drawing.Color.Green;
-            ReloadPage();
+            if(data.CheckRegister(user.member_fullname, user.member_mail, user.member_phone))
+            {
+                msg.Text = "Add Fail. Username or email or phone exists. Let try again!";
+                msg.ForeColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                data.AddNewUser(user);
+                msg.Text = "Add success!";
+                msg.ForeColor = System.Drawing.Color.Green;
+                ReloadPage();
+            }
+
         }
         catch (Exception ex)
         {
-            msg.Text = "Add Fail. Erorr: "+ex.Message+". Let try!";
+            msg.Text = "Add Fail. Erorr: "+ex.Message+". Let try again!";
             msg.ForeColor = System.Drawing.Color.Red;
         }
     }

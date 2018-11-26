@@ -243,14 +243,34 @@ public class DataUtil
 
     public bool CheckLogin(string username, string password, int type)
     {
-        string sql = "select * from Member where (member_username = @username or member_mail = @username) and member_password = @password and member_type=@type";
+        string sql = "select * from Member where (member_username = @username or member_mail = @username) and member_password = @password and member_type=@type and member_status=1";
         con.Open();
         SqlCommand cmd = new SqlCommand(sql, con);
-        //OdbcCommand command = new OdbcCommand(sql, con);
 
         cmd.Parameters.AddWithValue("username", username);
         cmd.Parameters.AddWithValue("password", password);
         cmd.Parameters.AddWithValue("type", type);
+
+        Int32 count = Convert.ToInt32(cmd.ExecuteScalar());
+        con.Close();
+
+        if (count > 0)
+            return true;
+        else
+            return false;
+    }
+
+
+
+    public bool CheckRegister(string username, string mail, string phone)
+    {
+        string sql = "select * from Member where member_username=@username or member_mail = @mail or member_phone= @phone";
+        con.Open();
+        SqlCommand cmd = new SqlCommand(sql, con);
+
+        cmd.Parameters.AddWithValue("username", username);
+        cmd.Parameters.AddWithValue("mail", mail);
+        cmd.Parameters.AddWithValue("phone", phone);
 
         Int32 count = Convert.ToInt32(cmd.ExecuteScalar());
         con.Close();

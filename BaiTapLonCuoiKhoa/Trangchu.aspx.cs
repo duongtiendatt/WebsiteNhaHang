@@ -21,7 +21,7 @@ public partial class Tranchu : System.Web.UI.Page
         }
     }
 
-    protected void LinkButton_Click(Object sender, EventArgs e)
+    protected void LogOut_Click(Object sender, EventArgs e)
     {
         Session["User"] = null;
         Response.Redirect("TrangChu.aspx");
