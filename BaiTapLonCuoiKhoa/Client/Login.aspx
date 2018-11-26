@@ -46,13 +46,14 @@
                     </div>
                     <div class="login-form-body">
                         <div class="form-gp">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" id="exampleInputEmail1">
+                            <label for="txtusername">Email address</label>
+                            <asp:TextBox runat="server" ID="txtusername" CssClass="form-control" Text="" />
+                            <%--<input type="email" id="exampleInputEmail1">--%>
                             <i class="ti-email"></i>
                         </div>
                         <div class="form-gp">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" id="exampleInputPassword1">
+                            <label for="txtpassword">Password</label>
+                            <asp:TextBox runat="server" ID="txtpassword" CssClass="form-control" TextMode="Password" />
                             <i class="ti-lock"></i>
                         </div>
                         <div class="row mb-4 rmber-area">
@@ -63,7 +64,9 @@
                             </div>
                         </div>
                         <div class="submit-btn-area">
-                            <button id="form_submit" type="submit">Submit <i class="ti-arrow-right"></i></button>
+                            <asp:Button CssClass="btn btn-primary" runat="server" ID="btnsubmit" Text="ADD"><i class="ti-arrow-right"></i></asp:Button>
+                            <%--<button id="form_submit" type="submit">Submit </button>--%>
+                            <%--OnClick="btnsubmit_Click"--%>
                         </div>
                         <div class="form-footer text-center mt-5">
                             <p class="text-muted">Don't have an account? <a href="/Client/Register.aspx">Sign up</a></p>
